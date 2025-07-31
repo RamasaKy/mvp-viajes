@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de Viajes</title>
+</head>
+<body>
+    <h1>Viajes Registrados</h1>
+    <a href="{{ url_for('crear') }}">Crear nuevo viaje</a>
+    <ul>
+        {% for viaje in viajes %}
+        <li>
+            {{ viaje.origen }} → {{ viaje.destino }} | {{ viaje.fecha }} | {{ viaje.pasajeros }} pasajero(s)
+            <a href="{{ url_for('eliminar', id=viaje.id) }}">Eliminar</a>
+        </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Crear Viaje</title>
+</head>
+<body>
+    <h1>Crear Nuevo Viaje</h1>
+    <form method="POST">
+        <label>Origen: <input type="text" name="origen" required></label><br>
+        <label>Destino: <input type="text" name="destino" required></label><br>
+        <label>Fecha: <input type="date" name="fecha" required></label><br>
+        <label>Pasajeros: <input type="number" name="pasajeros" required></label><br>
+        <button type="submit">Guardar</button>
+    </form>
+    <a href="{{ url_for('index') }}">Volver</a>
+</body>
+</html>
