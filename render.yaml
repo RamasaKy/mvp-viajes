@@ -1,0 +1,9 @@
+services:
+  - name: render
+    type: web
+    buildCommand: npm run build
+    startCommand: gunicorn app:app 
+    envVars:
+      - key: FLASK_ENV
+        value: production
+      
